@@ -1,0 +1,262 @@
+body{
+    margin: 0;
+    background-image: url(../image/background_theme.png);
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-size: cover ;
+}
+
+#base{
+    height: 100vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#rect{
+    height: 500px;
+    width: 500px;
+    border-style:solid ;
+    border-radius: 40px;
+    border-color: aliceblue;
+    rotate: 95deg;
+    transition: 0.3s ease-in-out;
+    opacity: 1;
+}
+
+p{
+    margin-top: 100px;
+    border :solid 5px;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+    border-color: white;
+    box-shadow: 0px 0px 20px rgb(97,47,255);
+    color: white;
+    border-radius: 25px;
+    font-family: Roboto Mono;
+    width: 800px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.roboto {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#rect:hover{
+    rotate: 0deg;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#letter{
+    width: 100%;
+    height: 100%;
+
+}
+
+
+
+
+
+#visible{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    opacity: 0;
+    
+
+}
+#visible:hover{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    opacity: 1;
+    flex-wrap: wrap;
+    height: 50%;
+
+}
+
+#mot{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 50%;
+    height: 50%;
+
+}
+
+
+#haut{
+    align-items: center;
+    justify-content: center;
+    rotate: 20deg;
+    width: 6%;
+    position: absolute;
+    animation: hautgauche 2s linear  infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    left:80%;
+    top:10%;
+    
+}
+
+@keyframes hautgauche{
+    0%{
+       
+       width: 2%;
+    }
+    50%{
+       
+        width: 3%;
+    }
+    100%{
+        width: 2%;
+    }
+}
+
+
+#bas{
+   position: absolute;
+   align-items: center;
+   top: 80%;
+   width: 5%;
+   animation: hautgauche 2s linear infinite;
+   rotate: 180deg;
+   animation-direction: alternate;
+}
+
+@keyframes hautgauche{
+    0%{
+       
+       width: 2%;
+    }
+    50%{
+       
+        width: 3%;
+    }
+    100%{
+        width: 2%;
+    }
+}
+
+#gauche{
+    position: absolute;
+   left: 10%;
+   top: 70%;
+   rotate: -100deg;
+   width: 50%;
+   transform: rotate(-30deg);
+   transform: rotate(-30deg);
+   animation: hautgauche 2s linear infinite;
+   animation-direction: alternate;
+   
+}
+
+@keyframes hautgauche{
+    0%{
+       
+       width: 2%;
+    }
+    50%{
+       
+        width: 3%;
+    }
+    100%{
+        width: 2%;
+    }
+}
+#droite{
+    position: absolute;
+    top:60%;
+    left: 80%;
+    width: 8%;
+    rotate: 100deg;
+    animation: hautgauche 5s linear infinite;
+    transform: translateY(30%, 30%);
+
+}
+@keyframes hautgauche{
+    0%{
+       
+       width: 3%;
+    }
+    50%{
+       
+        width: 4%;
+    }
+    100%{
+        width: 3%;
+    }
+}
+
+#hautgauche{
+    position: absolute;
+    bottom:75%;
+    left:15%;
+    width: 1%;
+    rotate: -50deg;
+    transform: scale(1.5);
+    animation: hautgauche 2s infinite;
+    
+}
+
+@keyframes hautgauche{
+    0%{
+       
+       width: 2%;
+    }
+    50%{
+       
+        width: 3%;
+    }
+    100%{
+        width: 2%;
+    }
+}
+
+
+button{
+    width: 200px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgb(97,47,255);
+    border-radius: 40px;
+    text-align: center;
+    font-size: 20pt;
+    color: white;
+    border-style: solid;
+    box-shadow:0px 0px 10px rgb(255, 255, 255);
+    transition: 0.3s ease-in-out;
+    font-family: Roboto Mono;
+}
+
+button:hover{
+    transform: scale(1.4);
+}
+
+#base img{
+    height: 40%;
+    width: 40%;
+    margin-bottom: 5%;
+}
+
