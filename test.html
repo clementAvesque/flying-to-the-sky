@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suivre une div qui bouge</title>
+    <style>
+        #movingDiv {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            transition: top 0.5s, left 0.5s; /* Pour un mouvement plus fluide */
+        }
+    </style>
+</head>
+<body>
+    <div id="movingDiv">Je bouge !</div>
+    <div id="tracker">Position: (50px, 50px)</div>
+    <button onclick="moveDiv()">Déplacer la div</button>
+
+    <script>
+        // Fonction pour déplacer la div
+        function moveDiv() {
+            const movingDiv = document.getElementById('movingDiv');
+            const newTop = Math.random() * 400;
+            const newLeft = Math.random() * 400;
+            movingDiv.style.top = newTop + 'px';
+            movingDiv.style.left = newLeft + 'px';
+        }
+
+        // Fonction pour mettre à jour le tracker
+        function updateTracker() {
+            const movingDiv = document.getElementById('movingDiv');
+            const tracker = document.getElementById('tracker');
+            const top = movingDiv.style.top;
+            const left = movingDiv.style.left;
+            tracker.textContent = `Position: (${top}, ${left})`;
+        }
+
+        // Observer les changements de style de la div
+        const observer = new MutationObserver(updateTracker);
+        observer.observe(document.getElementById('movingDiv'), { attributes: true, attributeFilter: ['style'] });
+    </script>
+</body>
+</html>

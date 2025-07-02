@@ -1,0 +1,142 @@
+
+.bungee-spice-regular {
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction:row ;
+    overflow: hidden;
+    justify-content: center;
+}
+
+#start{
+    align-self: center;
+    position: absolute;
+    color: red;
+    text-shadow: -12px -12px black;
+    font-size: 60pt;
+    font-family: Bungee Spice;
+}
+
+#screen1{
+
+    background-image: url("img/background.png");
+    background-size: cover;
+    height: 200vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+#screen2{
+
+    background-image: url("img/background.png");
+    background-size: cover;
+    height: 200vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+section{
+    height: 100vh;
+    width: 50vw;
+    overflow: hidden;
+}
+
+
+#player1 > .movement{
+    background-image: url("img/mongolefier_j1.png");
+    background-size: cover;
+
+}
+#player2 > .movement {  
+    background-image: url("img/mongolfier_j2.png");
+    background-size: cover;
+}
+
+#player1,#player2,#player1>.movement,#player2>.movement {
+    height: 56vh;
+    width: 40vh;
+}
+
+.movement{
+    animation-name: balancement;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.smooth_up{
+    transition: transform ease-in-out 0.8s;
+}
+
+#param1{
+    position: absolute;
+    top: 25%;
+    height: 50%;
+    width: 15%;
+    left: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#param2{
+    position: absolute;
+    right: 0%;
+    top: 25%;
+    height: 50%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+    font-size: 16pt;
+    font-family: Bungee Spice;
+    border: solid 5px;
+    border-radius: 5px;
+}
+
+@keyframes balancement {
+    0%{
+        transform: rotate(0deg);
+
+    }
+    10%{
+        transform: rotate(10deg);
+    }
+    12%{
+        transform: rotate(10deg);
+    }
+    17%{
+        transform: rotate(0deg);
+    }
+
+    30%{
+        transform: rotate(-10deg);
+    }
+
+    60%{
+        transform: rotate(8deg);
+    }
+    
+
+    80%{ transform: rotate(-5deg);}
+
+    100%{transform: rotate(0deg)}
+}
+
+
